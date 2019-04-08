@@ -1,0 +1,195 @@
+{% extends '../base.html' %}
+{% block page_title %}
+    <title>经典案例</title>
+{% endblock %}
+{% block page_css %}
+    <link rel="stylesheet" href="/static/css/classic-case.css">
+    <script src="/static/js/jquery-3.3.1.js"></script>
+{% endblock %}
+{% block content %}
+    <div class="content">
+        <div class="all-title">
+            <div class="small-title">经典案例</div>
+            <div class="sub-title">CLASSIC CASE</div>
+        </div>
+        <div class="cases">
+            <div class="left-case">
+                <img src="/static/imgs/left.png" alt="">
+            </div>
+            <div class="case">
+                <ul>
+                    <li style="left:0px;">
+                        <div class="banner">
+                            <img src="/static/imgs/banner1.png" alt="">
+                        </div>
+                        <div class="describe">
+                            <div class="describe-title">【茶花民宿】春熙路IFS太古里地铁1号线安静北欧小清新风格</div>
+                            <ul>
+                                <li>
+                                    <label for="">托管人:</label>
+                                    <span class="custodian">张女士</span>
+                                </li>
+                                <li>
+                                    <label for="">托管时间:</label>
+                                    <span class="trusteeship-time">2018.06.03</span>
+                                </li>
+                                <li>
+                                    <label for="">民宿概况：</label>
+                                    <span class="home-num">21间房</span>
+                                </li>
+                                <li>
+                                    <label for="">风格</label>
+                                    <span class="home-style">田园小清新</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li style="left:0;">
+                        <div class="banner">
+                            <img src="/static/imgs/banner2.png" alt="">
+                        </div>
+                        <div class="describe">
+                            <div class="describe-title">【茶花民宿】春熙路IFS太古里地铁2号线安静北欧小清新风格</div>
+                            <ul>
+                                <li>
+                                    <label for="">托管人:</label>
+                                    <span class="custodian">张女士</span>
+                                </li>
+                                <li>
+                                    <label for="">托管时间:</label>
+                                    <span class="trusteeship-time">2018.06.03</span>
+                                </li>
+                                <li>
+                                    <label for="">民宿概况：</label>
+                                    <span class="home-num">21间房</span>
+                                </li>
+                                <li>
+                                    <label for="">风格</label>
+                                    <span class="home-style">田园小清新</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li style="left:0;">
+                        <div class="banner">
+                            <img src="/static/imgs/banner1.png" alt="">
+                        </div>
+                        <div class="describe">
+                            <div class="describe-title">【茶花民宿】春熙路IFS太古里地铁3号线安静北欧小清新风格</div>
+                            <ul>
+                                <li>
+                                    <label for="">托管人:</label>
+                                    <span class="custodian">张女士</span>
+                                </li>
+                                <li>
+                                    <label for="">托管时间:</label>
+                                    <span class="trusteeship-time">2018.06.03</span>
+                                </li>
+                                <li>
+                                    <label for="">民宿概况：</label>
+                                    <span class="home-num">21间房</span>
+                                </li>
+                                <li>
+                                    <label for="">风格</label>
+                                    <span class="home-style">田园小清新</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!--<li style="left:0;">
+                        <div class="banner">
+                            <img src="./static/imgs/banner2.png" alt="">
+                        </div>
+                        <div class="describe">
+                            <div class="describe-title">【茶花民宿】春熙路IFS太古里地铁4号线安静北欧小清新风格</div>
+                            <ul>
+                                <li>
+                                    <label for="">托管人:</label>
+                                    <span class="custodian">张女士</span>
+                                </li>
+                                <li>
+                                    <label for="">托管时间:</label>
+                                    <span class="trusteeship-time">2018.06.03</span>
+                                </li>
+                                <li>
+                                    <label for="">民宿概况：</label>
+                                    <span class="home-num">21间房</span>
+                                </li>
+                                <li>
+                                    <label for="">风格</label>
+                                    <span class="home-style">田园小清新</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>-->
+                </ul>
+            </div>
+            <div class="right-case">
+                <img src="/static/imgs/right.png" alt="">
+            </div>
+        </div> 
+    </div>
+{% endblock %}
+{% block page_script %}
+    <script>
+        $(function() {
+            x_val = 732
+            $('.left-case').click(function() {
+                var nowTime = new Date().getTime();
+                var clickTime = $(this).attr("clicktime");
+                if((clickTime == undefined) || ((nowTime-clickTime) >= 500)){
+                    $(this).attr('clicktime', nowTime);
+                    leftSlide();
+                }
+            });
+            function leftSlide(){
+                li_num = $('.case').children('ul').children('li').length;
+                $('.case').children('ul').children('li').each(function() {
+                    current_index = $(this).index();
+                    left_px_num = current_index + 1
+                    right_px_num = li_num - left_px_num 
+                    min_px = -(left_px_num * x_val)
+                    max_px = right_px_num * x_val
+                    current_px_str = $(this).css('left');
+                    current_px_str = current_px_str.replace('px', '')
+                    current_px = parseInt(current_px_str)
+                    if((current_px > min_px) && (current_px <= max_px)) {
+                        $(this).animate({'left': (-x_val+current_px).toString() + 'px'});
+                    } else {
+                        now_px_str = max_px.toString()
+                        move_px_str = (max_px - x_val).toString()
+                        $(this).css({'left':now_px_str+'px', 'position':'relative'});
+                        $(this).animate({'left': move_px_str+'px'});
+                    }
+                });
+            }
+            $('.right-case').click(function() {
+                var nowTime = new Date().getTime();
+                var clickTime = $(this).attr("clicktime");
+                if((clickTime == undefined) || ((nowTime-clickTime) >= 500)){
+                    $(this).attr('clicktime', nowTime);
+                    rightSlide();
+                }            
+            });
+            function rightSlide(){
+                li_num = $('.case').children('ul').children('li').length;
+                $('.case').children('ul').children('li').each(function() {
+                    current_index = $(this).index();
+                    left_px_num = current_index + 1
+                    right_px_num = li_num - left_px_num 
+                    min_px = -(left_px_num * x_val)
+                    max_px = right_px_num * x_val
+                    current_px_str = $(this).css('left');
+                    current_px_str = current_px_str.replace('px', '')
+                    current_px = parseInt(current_px_str)
+                    if((current_px < max_px) && (current_px >= min_px)) {
+                        $(this).animate({'left': (current_px + x_val).toString() + 'px'});
+                    } else {
+                        $(this).css('left', min_px);
+                        $(this).animate({'left': (min_px + x_val).toString() + 'px'});
+                    } 
+                });
+            }
+        });
+</script>
+{% endblock %}

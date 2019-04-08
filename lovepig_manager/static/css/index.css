@@ -1,0 +1,47 @@
+body {
+    background: url('./imgs/bg1.png') no-repeat fixed center;
+    background-size: 100% 100%;
+}
+.content {
+    overflow: hidden;
+}
+.advantage {
+    width: 564px;
+    height: 290px;
+    background-color: white;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    margin-left: 25%;
+    margin-top: 15%;
+    position: absolute;
+}
+.advantage1 {
+    color: #f98000;
+    height: 40px;
+    font-size: 30px;
+    width: 466px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.6;
+    margin-top: 40px;
+}
+.advantage2 {
+    color: #f98000;
+    width: 466px;
+    height: 118px;
+    font-size: 58px;
+    border-bottom: 1px #f98000 solid;
+    margin: 0 auto;
+    font-weight: 600;
+    text-align: center;
+    line-height: 2;
+}
+.advantage3 {
+    color: #f98000;
+    height: 70px;
+    font-size: 24px;
+    width: 466px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 2.6;
+}

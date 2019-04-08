@@ -1,0 +1,168 @@
+body {
+    background-color: #131313;
+}
+
+.content {
+    overflow: hidden;
+    min-width: 1400px;
+}
+.all-title {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 6%; 
+}
+.small-title {
+    font-size: 48px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+.sub-title {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.newses {
+    width: 1400px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+.newses > ul > li {
+    width: 680px;
+    height: 209px;
+    background-color: #202020;
+    /* border: 1px red solid; */
+    float: left;
+    margin-right: 18px;
+    margin-top: 20px;
+}
+
+.news-img {
+    height: 207px;
+    widtH: 207px;
+    float: left;
+}
+.news-content {
+    width: 382px;
+    height: 170px;
+    margin-left: 38px;
+    float: left;
+    color: white;
+    margin-top: 8px;
+}
+.news-title {
+    font-weight: 600;
+    font-size: 18px;
+}
+.news-content > ul > li {
+    margin-top: 10px;
+}
+.news-detail, .news-part {
+    color: #a4a4a4;    
+    font-size: 14px;
+}
+.footer {
+    width: 1100px;
+    margin: 0 auto;
+}
+.friend-url {
+   overflow: hidden; 
+   margin-top: 2%;
+}
+.friend-url > span {
+    color: #8d8d8d;
+    display: inline-block;
+    height: 32px;
+    width: 70px;
+    font-size: 12px;
+}
+.friend-url > ul {
+    float: right;
+    width: 1030px;
+}
+.friend-url > ul > li {
+    float: left;
+    margin-left: 15px;
+}
+.friend-url > ul > li > a {
+    color: #8d8d8d;
+    font-size: 12px;
+}
+
+.company-info {
+    margin-top: 1%;
+    overflow: hidden;
+}
+.wechat-img {
+    float:left;
+    width: 122px;
+    margin-right: 85px;
+}
+.wechat-title {
+    color: white;
+    font-size: 16px;
+    width: 122px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.contact {
+    float:left;
+}
+.contact-name {
+    font-size: 12px;
+    color: #8d8d8d;
+    line-height: 2;
+}
+.contact-val {
+    font-size: 16px;
+    color: white;
+    line-height: 1.5;
+}
+
+.mid-left {
+    float: left;
+}
+.mid-right {
+    float: right;
+}
+.mid-right > ul > li {
+    float: left;
+    margin-right: 66px;
+}
+.mid-right-title {
+    font-size: 16px;
+    color: white;
+    line-height: 2;
+}
+.mid-right-content > li > a {
+    color: #8d8d8d;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.web-info {
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto;
+}
+.web-info1 {
+    margin-top: 1%;
+    overflow: hidden;
+    margin-left: 200px;
+}
+.web-info2 {
+    overflow: hidden;
+    text-align: center;
+}
+.web-info1 > li {
+    color: #8d8d8d;
+    font-size: 12px;
+    float: left;
+    margin-right: 30px;
+}
+.web-info2 > span {
+    color: #8d8d8d;
+    font-size: 12px;
+}
+

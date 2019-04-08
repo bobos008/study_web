@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/style.css">
+    {% block page_css %}
+    {% endblock %}
+    {% block page_title %}
+    {% endblock %}
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo"><img src="/static/imgs/LOGO.png" alt=""></div>
+            <ul class="menus">
+                <li><a href="/indexs/index">首页</a></li>
+                <li><a href="/indexs/advantage">托管优势</a></li>
+                <li><a href="#">服务特色</a></li>
+                <li><a href="/indexs/classicCase">经典案例</a></li>
+                <li><a href="#">团队介绍</a></li>
+                <li><a href="/indexs/brandHistory">品牌历史</a></li>
+                <li><a href="/indexs/corporateNews">企业新闻</a></li>
+                <li><a href="#">加入我们</a></li>
+                <li><a href="#">联系方式</a></li>
+            </ul>
+            <div class="operate">
+                <ul>
+                    <li>注册</li>
+                    <li>登录</li>
+                </ul>
+                <div class="publish-house">免费发布房源</div>
+            </div>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+{% block page_script %}
+{% endblock %}
+</html>

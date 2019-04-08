@@ -1,0 +1,55 @@
+body{
+    background: url('./imgs/bg3.png') no-repeat fixed center;
+    background-size: 100% 100%;
+}
+.content {
+    width: 100%;
+    min-width: 1500px;
+    position: relative;
+}
+.imgs-content {
+    margin-top: 100px;
+    margin-left: 480px;
+}
+.pig-img {
+    width: 118px;
+    height: 767px;
+    float: left;
+}
+.img-title {
+    margin-left: 30px;
+    margin-top: 18px;
+    float: left;
+    font-size: 48px;
+    color: #f39800;
+}
+@font-face {
+    font-family: siyuanheiti;
+    src: url("../fonts/SourceHanSansCN-Medium.otf");
+}
+.pig-date {
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    z-index: 100;
+    margin-left: 302px;
+    margin-top: 165px;
+    font-family: siyuanheiti;
+}
+.pig-date > ul > li {
+    margin-bottom: 62.5px;
+}
+.pig-thing {
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    z-index: 101;
+    margin-top: 165px;
+    margin-left: 584px;
+    font-family: siyuanheiti;
+}
+.pig-thing > ul > li {
+    margin-bottom: 62.5px;
+}

@@ -1,0 +1,78 @@
+body {
+    background: url('./imgs/bg2.png') no-repeat fixed center;
+    background-size: 100% 100%;
+}
+
+.content {
+    overflow: hidden;
+    width: 100%;
+}
+.all-title {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 6%; 
+}
+.small-title {
+    font-size: 48px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+.sub-title {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+.show-border {
+    width: 320px;
+    height: 440px;
+    border: 1px #f98000 solid;
+    position: absolute;
+    z-index: 2000;
+    margin-top: 12px;
+    margin-left: 19px;
+}
+
+.show-advantage {
+    width: 1500px;
+    margin: 0 auto;
+}
+.show-li {
+    float: left;
+    margin-left: 1%;
+    width: 360px;
+    margin-top: 6%;
+}
+@font-face {
+    font-family: fangzhengpangwafan;
+    src: url('../fonts/fzpwf.TTF');
+}
+.advantage-title {
+    background-color: black;
+    width: 360px;
+    height: 0;
+    color: white;
+    /* font-size: 3.2vw; */
+    font-size: 60px;
+    /* line-height: 4; */
+    padding-top: 30%;
+    padding-bottom: 50%;
+    text-align: center;
+    font-family: fangzhengpangwafan;
+}
+.advantage-p {
+    color: white;
+    width: 212px;
+    text-align: center;
+    margin:0 auto;
+    font-weight: 600;
+    margin-top: 10%;
+    /* font-size: 0.8vw; */
+    font-size: 16px;
+    line-height: 1.5;
+}
+@media screen and (max-width: 1400px) {
+    .advantage-title {
+        width: 300px;
+    }
+}
