@@ -4,7 +4,7 @@ body {
 
 .content {
     overflow: hidden;
-    min-width: 1400px;
+    min-width: 1300px;
 }
 .all-title {
     width: 100%;
@@ -25,17 +25,18 @@ body {
 
 .newses {
     width: 1400px;
+    min-width: 1300px;
     overflow: hidden;
     margin: 0 auto;
     margin-top: 1%;
 }
 .newses > ul > li {
-    width: 680px;
+    width: 650px;
     height: 209px;
     background-color: #202020;
     /* border: 1px red solid; */
     float: left;
-    margin-right: 18px;
+    margin-left: 18px;
     margin-top: 20px;
 }
 

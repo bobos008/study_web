@@ -4,7 +4,7 @@ body {
 
 .content {
     overflow: hidden;
-    min-width: 1600px;
+    min-width: 1300px;
 }
 .all-title {
     width: 100%;
@@ -23,7 +23,7 @@ body {
     text-align: center;
 }
 .cases {
-    width: 1600px;
+    width: 1300px;
     overflow: hidden;
     margin: 0 auto;
     margin-top: 2%;
@@ -37,18 +37,18 @@ body {
 }
 .case {
     float: left; 
-    width: 1452px;
+    width: 1152px;
     overflow: hidden;
     margin: 0 auto;
-    height: 655px;
+    height: 600px;
     position: relative;
 }
 .case > ul {
     /* position: relative; */
     overflow: hidden;
-    height: 655px;
+    height: 600px;
     margin: 0 auto;
-    width: 4000px;
+    width: 3000px;
 }
 .right-case {
     float: left;
@@ -58,21 +58,22 @@ body {
     height: 456px;
 }
 .right-case > img {
-    margin-top: 450%;
+    margin-top: 350%;
 }
 .left-case > img {
-    margin-top: 450%;
+    margin-top: 350%;
 }
 
 .case > ul > li {
     float: left;
     position: relative;
     overflow: hidden;
-    margin-right: 20px;
+    width: 570px;
+    margin-right: 10px;
 }
 .banner {
-    height: 456px;
-    width: 712px;
+    width: 570px;
+    height: 365px;
     background-color: white;
     border-radius: 20px;
 }
