@@ -9,5 +9,6 @@ urlpatterns = {
     url(r'^advantage/', views.advantage),
     url(r'^brandHistory/', views.brandHistory),
     url(r'^classicCase/', views.classicCase),
-    url(r'^corporateNews/', views.corporateNews)
+    url(r'^corporateNews/', views.corporateNews),
+    url(r'^mobileIndex/', views.mobileIndex),
 }
