@@ -85,8 +85,8 @@ a {text-decoration: none;}
 
 @media screen and (max-width: 1400px) {
     .header { min-width: 1100px;}
-    .logo {margin-left: 2px;}
+    .logo {margin-left: 10px;}
     .menus > li {margin-left: 15px;}
-    .operate {margin-right: 2px;}
+    .operate {margin-right: 10px;}
     .operate > ul {margin-right: 15px;}
 }

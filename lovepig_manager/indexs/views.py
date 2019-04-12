@@ -22,3 +22,10 @@ def classicCase(request):
 
 def corporateNews(request):
     return render(request, 'indexs/corporate-news.html')
+
+
+'''
+手机端
+'''
+def mobileIndex(request):
+    return render(request, 'mobile/mobileindex.html')

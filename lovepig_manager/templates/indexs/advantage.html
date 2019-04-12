@@ -17,22 +17,18 @@
         <div class="show-advantage">
             <ul>
                 <li class="show-li">
-                    <div></div>
                     <div class="advantage-title">省心</div>
                     <p class="advantage-p">专属客服7*24小时，随时随地在线，即时解决客户繁琐问题，解决房东时间， 做省心房东</p>
                 </li>
                 <li class="show-li">
-                    <div></div>
                     <div class="advantage-title">省事</div>
                     <p class="advantage-p">优秀民宿配套服务，维修卫生轻松解决，民宿线上店铺入驻，装修，设计，美工一条龙</p>
                 </li>
                 <li class="show-li">
-                    <div></div>
                     <div class="advantage-title">省时</div>
                     <p class="advantage-p">专属专业运营，迅速拉伸线上流量，快速提升客源；专业服务团队，迅速提升好评率，提高客户转化率</p>
                 </li>
                 <li class="show-li">
-                    <div></div>
                     <div class="advantage-title">省钱</div>
                     <p class="advantage-p">爱猪管家民宿托管，一天只要6.6元</p>
                 </li>
@@ -44,15 +40,14 @@
     <script>
         $(function() {
             $('.show-li').hover(function() {
-                $(this).children('div').first().addClass('show-border');
-                $(this).children('div').eq(1).css('color', '#f98000');
+                $(this).children('div').eq(0).css({'color': '#f98000'});
                 $(this).children('p').css('color', '#f98000');
-                // $(this.)
+                $(this).css({'border-bottom': '3px #f98000 solid', 'border-top': '3px #f98000 solid'});
             });
             $('.show-li').mouseleave(function() {
-                $(this).children('div').first().removeClass('show-border');
-                $(this).children('div').eq(1).css('color', 'white');
+                $(this).children('div').eq(0).css('color', 'white');
                 $(this).children('p').css('color', 'white');
+                $(this).css({'border-bottom': 'none', 'border-top': 'none'});
             });
         });
     </script>
