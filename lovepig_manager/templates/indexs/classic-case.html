@@ -13,120 +13,135 @@
             <div class="sub-title">CLASSIC CASE</div>
         </div>
         <div class="cases">
-            <div class="left-case">
-                <img src="/static/imgs/left.png" alt="">
-            </div>
+            {% if allow_click %}
+                <div class="left-click left-case">
+                    <img src="/static/imgs/left.png" alt="">
+                </div>
+            {% else %}
+                <div class="left-case">
+                    <img src="/static/imgs/left.png" alt="">
+                </div>
+            {% endif %}
             <div class="case">
                 <ul>
-                    <li style="left:0px;">
-                        <div class="banner">
-                            <img src="/static/imgs/banner1.png" alt="">
-                        </div>
-                        <div class="describe">
-                            <div class="describe-title">[茶花民宿]  春熙路IFS太古里地铁1号线安静北欧小清新风格</div>
-                            <ul>
-                                <li>
-                                    <label for="">托管人:</label>
-                                    <span class="custodian">张女士</span>
-                                </li>
-                                <li>
-                                    <label for="">托管时间:</label>
-                                    <span class="trusteeship-time">2018.12.31</span>
-                                </li>
-                                {% comment %} <li>
-                                    <label for="">民宿概况：</label>
-                                    <span class="home-num">21间房</span>
-                                </li> {% endcomment %}
-                                <li>
-                                    <label for="">风格:</label>
-                                    <span class="home-style">田园小清新</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!--<li style="left:0;">
-                        <div class="banner">
-                            <img src="/static/imgs/banner2.png" alt="">
-                        </div>
-                        <div class="describe">
-                            <div class="describe-title">[茶花民宿]  春熙路IFS太古里地铁2号线安静北欧小清新风格</div>
-                            <ul>
-                                <li>
-                                    <label for="">托管人:</label>
-                                    <span class="custodian">张女士</span>
-                                </li>
-                                <li>
-                                    <label for="">托管时间:</label>
-                                    <span class="trusteeship-time">2018.06.03</span>
-                                </li>
-                                {% comment %} <li>
-                                    <label for="">民宿概况：</label>
-                                    <span class="home-num">21间房</span>
-                                </li> {% endcomment %}
-                                <li>
-                                    <label for="">风格:</label>
-                                    <span class="home-style">田园小清新</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>-->
-                    <li style="left:0;">
-                        <div class="banner">
-                            <img src="/static/imgs/banner3.png" alt="">
-                        </div>
-                        <div class="describe">
-                            <div class="describe-title">[龙井茶园]  龙井茶园的雅致私宅</div>
-                            <ul>
-                                <li>
-                                    <label for="">托管人:</label>
-                                    <span class="custodian">汪先生</span>
-                                </li>
-                                <li>
-                                    <label for="">托管时间:</label>
-                                    <span class="trusteeship-time">2018.09.28</span>
-                                </li>
-                                {% comment %} <li>
-                                    <label for="">民宿概况：</label>
-                                    <span class="home-num">21间房</span>
-                                </li> {% endcomment %}
-                                <li>
-                                    <label for="">风格:</label>
-                                    <span class="home-style">北欧乡村原木风格</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li style="left:0;">
-                        <div class="banner">
-                            <img src="/static/imgs/banner4.png" alt="">
-                        </div>
-                        <div class="describe">
-                            <div class="describe-title">[湖州安吉] 湖州安吉 - 等风来</div>
-                            <ul>
-                                <li>
-                                    <label for="">托管人:</label>
-                                    <span class="custodian">方女士</span>
-                                </li>
-                                <li>
-                                    <label for="">托管时间:</label>
-                                    <span class="trusteeship-time">2018.12.12</span>
-                                </li>
-                                {% comment %} <li>
-                                    <label for="">民宿概况：</label>
-                                    <span class="home-num">21间房</span>
-                                </li> {% endcomment %}
-                                <li>
-                                    <label for="">风格:</label>
-                                    <span class="home-style">乡村精致临水客栈</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                    {% for classic_case in classic_case_set %}
+                        <li style="left:0px;">
+                            <div class="banner">
+                                <img src="/{{ classic_case.cover }}" alt="">
+                            </div>
+                            <div class="describe">
+                                <div class="describe-title">[{{ classic_case.small_title }}]  {{ classic_case.case_title }}</div>
+                                <ul>
+                                    <li>
+                                        <label for="">托管人:</label>
+                                        <span class="custodian">{{ classic_case.client_name }}</span>
+                                    </li>
+                                    <li>
+                                        <label for="">托管时间:</label>
+                                        <span class="trusteeship-time">{{ classic_case.hosting_date }}</span>
+                                    </li>
+                                    {% comment %} <li>
+                                        <label for="">民宿概况：</label>
+                                        <span class="home-num">21间房</span>
+                                    </li> {% endcomment %}
+                                    <li>
+                                        <label for="">风格:</label>
+                                        <span class="home-style">{{ classic_case.house_style }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    {% empty %}
+                        <li style="left:0px;">
+                            <div class="banner">
+                                <img src="/static/imgs/ban1.png" alt="">
+                            </div>
+                            <div class="describe">
+                                <div class="describe-title">[茶花民宿]  春熙路IFS太古里地铁1号线安静北欧小清新风格</div>
+                                <ul>
+                                    <li>
+                                        <label for="">托管人:</label>
+                                        <span class="custodian">董女士</span>
+                                    </li>
+                                    <li>
+                                        <label for="">托管时间:</label>
+                                        <span class="trusteeship-time">2018.12.31</span>
+                                    </li>
+                                    {% comment %} <li>
+                                        <label for="">民宿概况：</label>
+                                        <span class="home-num">21间房</span>
+                                    </li> {% endcomment %}
+                                    <li>
+                                        <label for="">风格:</label>
+                                        <span class="home-style">田园小清新</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li style="left:0;">
+                            <div class="banner">
+                                <img src="/static/imgs/ban3.png" alt="">
+                            </div>
+                            <div class="describe">
+                                <div class="describe-title">[龙井茶园]  龙井茶园的雅致私宅</div>
+                                <ul>
+                                    <li>
+                                        <label for="">托管人:</label>
+                                        <span class="custodian">汪先生</span>
+                                    </li>
+                                    <li>
+                                        <label for="">托管时间:</label>
+                                        <span class="trusteeship-time">2018.09.28</span>
+                                    </li>
+                                    {% comment %} <li>
+                                        <label for="">民宿概况：</label>
+                                        <span class="home-num">21间房</span>
+                                    </li> {% endcomment %}
+                                    <li>
+                                        <label for="">风格:</label>
+                                        <span class="home-style">北欧乡村原木风格</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li style="left:0;">
+                            <div class="banner">
+                                <img src="/static/imgs/ban4.png" alt="">
+                            </div>
+                            <div class="describe">
+                                <div class="describe-title">[湖州安吉] 湖州安吉 - 等风来</div>
+                                <ul>
+                                    <li>
+                                        <label for="">托管人:</label>
+                                        <span class="custodian">方女士</span>
+                                    </li>
+                                    <li>
+                                        <label for="">托管时间:</label>
+                                        <span class="trusteeship-time">2018.12.12</span>
+                                    </li>
+                                    {% comment %} <li>
+                                        <label for="">民宿概况：</label>
+                                        <span class="home-num">21间房</span>
+                                    </li> {% endcomment %}
+                                    <li>
+                                        <label for="">风格:</label>
+                                        <span class="home-style">乡村精致临水客栈</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
-            <div class="right-case">
-                <img src="/static/imgs/right.png" alt="">
-            </div>
+            {% if allow_click %}
+                <div class="right-click right-case">
+                    <img src="/static/imgs/right.png" alt="">
+                </div>
+            {% else %}
+                <div class="right-case">
+                    <img src="/static/imgs/right.png" alt="">
+                </div>
+            {% endif %}
         </div> 
     </div>
 {% endblock %}
@@ -134,7 +149,7 @@
     <script>
         $(function() {
             x_val = 580 
-            $('.left-case').click(function() {
+            $('.left-click').click(function() {
                 var nowTime = new Date().getTime();
                 var clickTime = $(this).attr("clicktime");
                 if((clickTime == undefined) || ((nowTime-clickTime) >= 500)){
@@ -163,7 +178,7 @@
                     }
                 });
             }
-            $('.right-case').click(function() {
+            $('.right-click').click(function() {
                 var nowTime = new Date().getTime();
                 var clickTime = $(this).attr("clicktime");
                 if((clickTime == undefined) || ((nowTime-clickTime) >= 500)){

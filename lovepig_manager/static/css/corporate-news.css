@@ -29,6 +29,7 @@ body {
     overflow: hidden;
     margin: 0 auto;
     margin-top: 1%;
+    height: 460px
 }
 .newses > ul > li {
     width: 650px;

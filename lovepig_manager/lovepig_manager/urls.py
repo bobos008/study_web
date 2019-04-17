@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
     url(r'^indexs/', include('indexs.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
 ]
