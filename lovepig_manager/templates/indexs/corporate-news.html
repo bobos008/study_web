@@ -15,6 +15,29 @@
         </div>
         <div class="newses">
             <ul>
+                {% for news in news_set %}
+                    <li>
+                        <div class="news-img">
+                            <img src="/{{news.thumb_img}}" alt="">
+                        </div>
+                        <div class="news-content">
+                            <ul>
+                                <li>
+                                    <span class="news-title">{{ news.news_title }}</span>
+                                </li>
+                                <li>
+                                    <span class="publish-time">{{ news.news_push_date }}</span>
+                                </li>
+                                <li class="news-part">
+                                    {{ news.news_description }}......
+                                </li>
+                                <li>
+                                    <a class="news-detail" href="#">查看更多</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                {% empty %}
                 <li>
                     <div class="news-img">
                         <img src="/static/imgs/news1.png" alt="">
@@ -118,6 +141,7 @@
                         </ul>
                     </div>
                 </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
@@ -155,7 +179,7 @@
                     <ul>
                         <li>
                             <div class="contact-name">公司邮箱:</div>
-                            <div class="contact-val">2468308255@qq.com</div>
+                            <div class="contact-val">{{ company_info.company_email }}</div>
                         </li>
                         {% comment %} <li>
                             <div class="contact-name">全国统一服务热线:</div>
@@ -163,7 +187,7 @@
                         </li> {% endcomment %}
                         <li>
                             <div class="contact-name">座机:</div>
-                            <div class="contact-val">020-86627977</div>
+                            <div class="contact-val">{{ company_info.landline }}</div>
                         </li>
                     </ul>
                 </div>
@@ -209,9 +233,9 @@
         </div>
         <div class="web-info">
             <ul class="web-info1">
-                <li>备案号：京ICP证18001742号-1</li>
+                <li>备案号：{{ company_info.case_number }}</li>
                 <li>安全联盟</li>
-                <li>北京朋恩旅游行社有限公司</li>
+                <li>{{ company_info.company_name }}</li>
                 {% comment %} <li>营业执照号：103613118</li> {% endcomment %}
             </ul>
             {% comment %} <div class="web-info2">

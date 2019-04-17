@@ -1,30 +1,6 @@
-<!doctype html>
-<html lang="en" class="no-js">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<meta name="format-detection" content="telephone=no, email=no" />
-	<link rel="stylesheet" href="/static/mobile/css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="/static/mobile/css/memu.css"> 
-	<link rel="stylesheet" href="/static/mobile/css/swiper.min.css"> <!-- Resource style -->
-	<link rel="stylesheet" href="/static/mobile/css/style.css">
-	<script src="/static/mobile/js/modernizr.js"></script> <!-- Modernizr -->
-  	
-	<title>jQuery</title>
-</head>
-<body data-psd-width="750">
-	<header>
-		<a class="logo"><img src="/static/mobile/img/logo.png" ></a>
-		<!-- <nav id="cd-top-nav">
-			<ul>
-				<li><a href="#0">Tour</a></li>
-				<li><a href="#0">Login</a></li>
-			</ul>
-		</nav> -->
-		<a id="cd-menu-trigger" href="#0"><span class="cd-menu-text"></span><span class="cd-menu-icon"></span></a>
-	</header>
+{% extends '../mobileBase.html' %}
+
+{% block content %}
 	<main class="cd-main-content">
 		<!-- banner -->
 <div class="banner">
@@ -276,3 +252,4 @@
     });
   
 </script>
+{% endblock %}
