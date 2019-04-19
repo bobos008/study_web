@@ -60,6 +60,10 @@ a {text-decoration: none;}
     border-bottom: 2px #f98000 solid;
     color: #f98000;
 }
+/* .click-menu {
+    border-bottom: 2px #f98000 solid;
+    color: #f98000;
+} */
 .operate > ul {
     float: left;
     margin-right: 30px;
@@ -92,4 +96,48 @@ a {text-decoration: none;}
     .menus > li {margin-left: 15px;}
     .operate {margin-right: 10px;}
     .operate > ul {margin-right: 15px;}
+}
+
+.popup {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10001;
+}
+.login{
+    position: fixed !important; 
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: white;
+    width: 560px;
+    height: 420px; 
+    z-index: 10002;
+}
+.login-header {
+    overflow: hidden;
+    margin-top: 20px;
+}
+.message-login {
+    float: left;
+    font-size: 18px;
+    color: #f69700; 
+    margin-left: 100px;
+    line-height: 2;
+}
+.common-login {
+    float: right;
+    font-size: 18px;
+    color: #777;
+    margin-right: 100px;
+    line-height: 2;
+    /* border-top: 2px #f69700 solid; */
+}
+.login-content {
+    clear: both;
 }
