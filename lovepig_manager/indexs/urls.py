@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'^brandHistory/', views.brandHistory),
     url(r'^classicCase/', views.classicCase),
     url(r'^corporateNews/', views.corporateNews),
+    url(r'^agreement/', views.agreement),
     url(r'^mobileIndex/', views.mobileIndex),
 ]

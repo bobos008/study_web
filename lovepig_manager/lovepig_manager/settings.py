@@ -25,8 +25,9 @@ SECRET_KEY = 'gq!@qzd+cxzqbht#gar#t81#55c(4gla9fb3m!4kzsnb(4-39#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', ]
 
 
 # Application definition
@@ -83,8 +84,8 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'housekeeper',
-        'USER': 'root',
-        'PASSWORD': '123456',
+        'USER': 'zhidu',
+        'PASSWORD': 'zhidu123456',
         'HOST': 'localhost',
         'PORT': '3306'
     }
@@ -130,8 +131,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, "static"),
 ]
 
 # 富文本编辑器配置

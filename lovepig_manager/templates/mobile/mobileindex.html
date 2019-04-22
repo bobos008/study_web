@@ -1,6 +1,38 @@
-{% extends '../mobileBase.html' %}
-
-{% block content %}
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<link rel="stylesheet" href="/static/mobile/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="/static/mobile/css/memu.css"> 
+	<link rel="stylesheet" href="/static/mobile/css/swiper.min.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="/static/mobile/css/style.css">
+	<script src="/static/mobile/js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>jQuery</title>
+</head>
+<body data-psd-width="750">
+	<header>
+		<a class="logo"><img src="/static/mobile/img/logo.png" ></a>
+		<!-- <nav id="cd-top-nav">
+			<ul>
+				<li><a href="#0">Tour</a></li>
+				<li><a href="#0">Login</a></li>
+			</ul>
+		</nav> -->
+		<a id="cd-menu-trigger"  href="#0">
+			<!-- <span class="cd-menu-icon"></span> -->
+		<span class="open-tag">
+			<img src="/static/mobile/img/open.png" alt="">
+		</span>
+		<span class="close-tag">
+			<img src="/static/mobile/img/close.png" alt="">
+		</span>
+		</a>
+	</header>
 	<main class="cd-main-content">
 		<!-- banner -->
 <div class="banner">
@@ -39,7 +71,7 @@
 		 <li>
 			 
 			<span>
-				<img src="/static/mobile/img/shenxin.png" alt="">
+				<img src="/static/mobile/img/省心.png" alt="">
 			</span>
 
 			 <div class="jieshao">
@@ -48,7 +80,7 @@
 		 </li>
 		 <li>
 			 
-				<span><img src="/static/mobile/img/shenshi1.png" alt=""></span>
+				<span>	<img src="/static/mobile/img/shenshi.png" alt=""></span>
 	
 				 <div class="jieshao">
 					 <p>优秀民宿配套服务，维修卫生轻松解决，民宿线上店铺入驻、装修、设计、美工一条龙</p>
@@ -56,7 +88,7 @@
 			 </li>
 			 <li>
 			
-					<span>	<img src="/static/mobile/img/shenshi.png" alt=""></span>
+					<span>	<img src="/static/mobile/img/省时.png" alt=""></span>
 		
 					 <div class="jieshao">
 						 <p>专属专业运营，迅速拉伸线上流量，快速提升客源；专业服务团队，迅速提升好评率，提高客户转化率</p>
@@ -64,7 +96,7 @@
 				 </li>
 				 <li>
 			 
-						<span>	<img src="/static/mobile/img/shenqian.png" alt=""></span>
+						<span>	<img src="/static/mobile/img/shenqiang.png" alt=""></span>
 			
 						 <div class="jieshao">
 							 <p>爱猪管家民宿托管，一天只要6.6元</p>
@@ -82,7 +114,7 @@
 							<div class="swiper-wrapper">
 									<div class="swiper-slide"><div class="describe">
 										<a href="">
-											<img src="/static/mobile/img/anli(1).png" alt="">
+											<img src="/static/mobile/img/yuanxin.png" alt="">
 								<div class="pic-mask"></div>
 												<p>[茶花民宿] 春熙路IFS太古里地铁234
 													号线安静北欧小清新风格</p>
@@ -91,17 +123,20 @@
 									</div></div>
 										<div class="swiper-slide"><div class="describe">
 										<a href="">
-											<img src="/static/mobile/img/anli(2).png" alt="">
+											<img src="/static/mobile/img/yuanxin.png" alt="">
 								<div class="pic-mask"></div>
-												<p>[龙井茶园] 龙井茶园的雅致私宅</p>
+												<p>[茶花民宿] 春熙路IFS太古里地铁234
+													号线安静北欧小清新风格</p>
 								
 										</a>
 									</div></div>
 										<div class="swiper-slide"><div class="describe">
 										<a href="">
-											<img src="/static/mobile/img/anli(3).png" alt="">
+											<img src="/static/mobile/img/yuanxin.png" alt="">
 								<div class="pic-mask"></div>
-												<p>[湖州] 湖州安吉 - 等风来</p>
+												<p>[茶花民宿] 春熙路IFS太古里地铁234
+													号线安静北欧小清新风格</p>
+								
 										</a>
 									</div></div>
 							</div>
@@ -146,11 +181,11 @@
       <ul class="newsList">
 				<li>
 					<div class="img">
-						<img src="/static/mobile/img/xinwen.png" alt="">
+						<img src="/static/mobile/img/xinwen (2).png" alt="">
 					</div>
 					<div class="general">
 						<h4>做强精品民宿 做大民宿经济</h4>
-						<span>2018-03-20</span>
+						<span>2018-06-26</span>
 						<p>受乡村农旅产业带动，丽水市民宿经济也呈现水涨船高之势，对促进济也呈现水涨船高之势，对促进</p>
 						<a href="">查看更多 >> </a>
 					</div>
@@ -160,31 +195,31 @@
 						<img src="/static/mobile/img/xinwen (2).png" alt="">
 					</div>
 					<div class="general">
-						<h4>来莫干山旅游， 不容错过的民宿攻略</h4>
-						<span>2018-11-26</span>
-						<p>莫干山国家AAAA级旅游景区，国家级风景名胜区，国家森林 公园位于浙江省湖州市德清县境内，为</p>
-						<a href="">查看更多 >> </a>
-					</div>
-				</li>
-				<li>
-					<div class="img">
-						<img src="/static/mobile/img/xinwen (3).png" alt="">
-					</div>
-					<div class="general">
-						<h4>草坪漓江生态休闲小镇优质民宿资源</h4>
+						<h4>做强精品民宿 做大民宿经济</h4>
 						<span>2018-06-26</span>
-						<p>从美团点评公布的数据了解到，2016年到2018年，中国民宿 行业日均间夜量年增幅都超过200%，预</p>
+						<p>受乡村农旅产业带动，丽水市民宿经济也呈现水涨船高之势，对促进济也呈现水涨船高之势，对促进</p>
 						<a href="">查看更多 >> </a>
 					</div>
 				</li>
 				<li>
 					<div class="img">
-						<img src="/static/mobile/img/xinwen (4).png" alt="">
+						<img src="/static/mobile/img/xinwen (2).png" alt="">
 					</div>
 					<div class="general">
-						<h4>民宿平台发展线下服务，对房东有多大吸引力?</h4>
-						<span>2018-08-08</span>
-						<p>从2017年开始，包括Airbnb、小猪、榛果民宿在内的民宿平 台都不满足于线上的经营而做起了线下</p>
+						<h4>做强精品民宿 做大民宿经济</h4>
+						<span>2018-06-26</span>
+						<p>受乡村农旅产业带动，丽水市民宿经济也呈现水涨船高之势，对促进济也呈现水涨船高之势，对促进</p>
+						<a href="">查看更多 >> </a>
+					</div>
+				</li>
+				<li>
+					<div class="img">
+						<img src="/static/mobile/img/xinwen (2).png" alt="">
+					</div>
+					<div class="general">
+						<h4>做强精品民宿 做大民宿经济</h4>
+						<span>2018-06-26</span>
+						<p>受乡村农旅产业带动，丽水市民宿经济也呈现水涨船高之势，对促进济也呈现水涨船高之势，对促进</p>
 						<a href="">查看更多 >> </a>
 					</div>
 				</li>
@@ -206,10 +241,9 @@
 			<p>微信二维码</p>
 		</div>
 		<ul class="telephone">
-			<li><span>公司的邮箱：</span> <em>2468308255@qq.com</em></li>
-			<!-- <li><span>服务热线：</span> <em>400 7781899</em></li> -->
-			<li><span>公司名称：</span> <em>北京朋恩旅游行社有限公司</em></li>
-		<li><span>座 机：</span> <em>020-86627977</em></li>
+			<li><span>公司的邮箱：</span> <em>sht728@163.com</em></li>
+			<li><span>服务热线：</span> <em>400 7781899</em></li>
+		<li><span>座 机：</span> <em>0755-28875411</em></li>
 		</ul>
 	</div>
 <p class="copyright">京ICP备18001742号-1</p>
@@ -243,13 +277,14 @@
 </html>
 <script>
 	var swiper = new Swiper('.swiper-container');
+
     var swiper2 = new Swiper('.swiper-container2', {
 			direction: 'horizontal',
-			spaceBetween : 10,
-			loop: true,
-			slidesPerView : 1.2,
-			centeredSlides : true
+
+spaceBetween : 10,
+loop: true,
+slidesPerView : 1.2,
+centeredSlides : true
     });
   
 </script>
-{% endblock %}

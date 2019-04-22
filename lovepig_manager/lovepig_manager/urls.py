@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from indexs import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -23,3 +25,4 @@ urlpatterns = [
     url(r'^indexs/', include('indexs.urls')),
     url(r'^tinymce/', include('tinymce.urls')),
 ]
+handler404 = views.page_not_found

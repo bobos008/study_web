@@ -71,6 +71,14 @@ def corporateNews(request):
     return render(request, 'indexs/corporate-news.html', news_data)
 
 
+def agreement(requests):
+    ''' 服务条款 '''
+    return render(requests, 'indexs/agreement.html')
+
+
+def page_not_found(request):
+    return render(request, 'pc404.html')
+
 '''
 手机端
 '''

@@ -20,7 +20,7 @@ class CorporateNewsAdmin(admin.ModelAdmin):
 
 @admin.register(CompanyInfo)
 class CompanyInfoAdmin(admin.ModelAdmin):
-    list_display = ['company_id', 'company_name', 'company_email', 'landline', 'case_number', 'bussness_num']
+    list_display = ['company_name', 'company_email', 'landline', 'case_number', 'bussness_num']
     # fields = ('company_id', 'company_name', 'company_email', 'landline', 'case_number', 'bussness_num')
 
 
