@@ -7,7 +7,8 @@ jQuery(document).ready(function($){
 	$lateral_menu_trigger.on('click', function(event){
 		event.preventDefault();
 		
-		$lateral_menu_trigger.toggleClass('is-clicked');
+		// $lateral_menu_trigger.toggleClass('is-clicked');
+		$lateral_menu_trigger.toggleClass('on');
 		$navigation.toggleClass('lateral-menu-is-open');
 		$content_wrapper.toggleClass('lateral-menu-is-open').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
 			// firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
@@ -24,7 +25,8 @@ jQuery(document).ready(function($){
 	//close lateral menu clicking outside the menu itself
 	$content_wrapper.on('click', function(event){
 		if( !$(event.target).is('#cd-menu-trigger, #cd-menu-trigger span') ) {
-			$lateral_menu_trigger.removeClass('is-clicked');
+			// $lateral_menu_trigger.removeClass('is-clicked');
+			$lateral_menu_trigger.removeClass('on');
 			$navigation.removeClass('lateral-menu-is-open');
 			$content_wrapper.removeClass('lateral-menu-is-open').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
 				$('body').removeClass('overflow-hidden');
